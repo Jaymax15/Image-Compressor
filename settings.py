@@ -13,4 +13,4 @@ num_colours_MAX     = 256          # colours to start with (2–256)
 num_colours_MIN     = 64           # minimum allowed colours
 
 # ── File output ----------------------------------------------------
-save_path = "C:/Users/Jason/Downloads"  # automatically updated by Image_Tools.py
+save_path = ""  # automatically updated by Image_Tools.py
