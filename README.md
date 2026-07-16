@@ -94,12 +94,6 @@ All compressed images are exported as AVIF files regardless of the original form
 
 An added benefit of this approach is that AVIF files can be recompressed multiple times if desired, allowing for even more aggressive size reductions.
 
-## Example Usage
-
-```bash
-python compressor.py input.jpg output.avif --target-size 50 --passes 2 --remove-metadata
-```
-
 ## Recommendations
 
 For the best balance between quality and compression:
@@ -133,74 +127,6 @@ This project was developed and tested using **Python 3.11** and is recommended f
 > **Note:** `tkinter` is required for the file selection dialogs. It is included with most standard Python installations on Windows. Linux users may need to install it separately.
 
 The program also requires a `settings.py` file to be present in the same directory as `Image_Compressor.py`.
-
----
-
-## Installation
-
-### 1. Verify Python Installation
-
-```bash
-python --version
-```
-
-You should see:
-
-```text
-Python 3.11.x
-```
-
----
-
-### 2. (Optional) Create a Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate it:
-
-#### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-#### Linux / macOS
-
-```bash
-source venv/bin/activate
-```
-
----
-
-### 3. Install Required Packages
-
-Copy and paste the following command into your terminal:
-
-```bash
-pip install Pillow pillow-avif-plugin imagequant
-```
-
-Alternatively, install from a requirements file:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## requirements.txt
-
-Create a file named `requirements.txt` containing:
-
-```text
-Pillow
-pillow-avif-plugin
-imagequant
-```
-
----
 
 ## Running the Program
 
