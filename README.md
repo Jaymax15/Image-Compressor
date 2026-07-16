@@ -113,9 +113,130 @@ Minimum Colors: 64
 Maximum Colors: 256
 ```
 
+Windows (PowerShell) Installation
+
+Open PowerShell and run the following command:
+```powershell
+py -3.11 -m pip install --upgrade pip Pillow pillow-avif-plugin imagequant
+```
+
+# Requirements
+
+This project was developed and tested using **Python 3.11** and is recommended for the best compatibility.
+
+### Required Python Packages
+
+* Pillow
+* pillow-avif-plugin
+* imagequant
+
+> **Note:** `tkinter` is required for the file selection dialogs. It is included with most standard Python installations on Windows. Linux users may need to install it separately.
+
+The program also requires a `settings.py` file to be present in the same directory as `Image_Compressor.py`.
+
+---
+
+## Installation
+
+### 1. Verify Python Installation
+
+```bash
+python --version
+```
+
+You should see:
+
+```text
+Python 3.11.x
+```
+
+---
+
+### 2. (Optional) Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 3. Install Required Packages
+
+Copy and paste the following command into your terminal:
+
+```bash
+pip install Pillow pillow-avif-plugin imagequant
+```
+
+Alternatively, install from a requirements file:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## requirements.txt
+
+Create a file named `requirements.txt` containing:
+
+```text
+Pillow
+pillow-avif-plugin
+imagequant
+```
+
+---
+
+## Running the Program
+
+```bash
+python Image_Compressor.py
+```
+
+The application will:
+
+1. Open a file selection dialog.
+2. Allow you to choose an image.
+3. Compress the image using AVIF encoding.
+4. Reduce colors intelligently using `libimagequant`.
+5. Save the compressed image as `.avif`.
+
+---
+
+## Supported Input Formats
+
+* JPG / JPEG
+* PNG
+* BMP
+* GIF
+* TIFF
+* WEBP
+* AVIF
+
+---
+
 ## Notes
 
-This project was built as a lightweight utility for situations where bandwidth and storage are limited. It pairs particularly well with low-bandwidth communication systems and can dramatically reduce the size of images intended for transmission over constrained networks.
+* Recommended Python Version: **3.11**
+* `tkinter` must be available on your system.
+* The script automatically removes image metadata during compression.
+* Compression settings such as target size, color limits, and output location are configured through `settings.py`.
+* AVIF output provides extremely high compression ratios while maintaining impressive image quality.
 
 Despite its simplicity, the compressor is capable of producing remarkably small images while maintaining surprisingly good visual fidelity.
 
